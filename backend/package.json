@@ -1,0 +1,16 @@
+{
+    "name": "backend",
+    "version": "1.0.0",
+    "main": "stripeserver.js",
+    "type": "module",
+    "dependencies": {
+      "express": "^4.19.2",
+      "cors": "^2.8.5",
+      "stripe": "^8.0.0"
+    },
+    
+    "devDependencies": {
+      "nodemon": "^2.0.15"
+    }
+  }
+  
