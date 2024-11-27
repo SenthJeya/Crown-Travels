@@ -40,7 +40,7 @@ const RooyLayout = () => {
     if (!fontsLoaded && !error) return null;
 
     return (
-        <StripeProvider publishableKey="pk_test_51PwQobP2nA8oNDSibF5Twf9UTdtwJIc9QDNpSbt8Ip8ry2JxkFjI5RpLlFFqEZoR4vqgag5yxjoBnUK2rncZXZ4G00yZJIxZ5Wey"> 
+        <StripeProvider publishableKey="your api key"> 
             <Stack>
                 <Stack.Screen name="index" options={{ headerShown: false }} />
                 <Stack.Screen name="auth" options={{ headerShown: false }} />
