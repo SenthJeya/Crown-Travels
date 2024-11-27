@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import { View, Text, StyleSheet, TouchableOpacity, Image, ScrollView, ActivityIndicator, RefreshControl,StatusBar,Platform } from 'react-native';
-//import { SafeAreaView } from 'react-native-safe-area-context';
 import { db } from '../firebase';  // Import your Firebase configuration
 import { collection, getDocs } from 'firebase/firestore';
 import { useRouter } from 'expo-router';  // Import useRouter
@@ -76,16 +75,13 @@ const Vehicle = () => {
 
   if (loading) {
     return (
-      //<SafeAreaView style={styles.loadingContainer}>
       <View style={{paddingTop: Platform.OS === 'android' ? StatusBar.currentHeight : 0}}>
         <ActivityIndicator size="large" color="#662483" />
       </View>
-      //</SafeAreaView>
     );
   }
 
   return (
-    //<SafeAreaView style={styles.container}>
     <View style={styles.container}>
       <ScrollView
         refreshControl={
@@ -96,9 +92,6 @@ const Vehicle = () => {
           />
         }
       >
-        {/* <View style={styles.header}>
-          <Text style={styles.headerText}>Vehicles</Text>
-        </View> */}
         <TabHeader title="Vehicles"/>
         <View style={styles.innerContainer}>
           {vehicles.length === 0 ? (
@@ -166,19 +159,6 @@ const Vehicle = () => {
 };
 
 const styles = StyleSheet.create({
-  // header: {
-  //   flexDirection: 'row',
-  //   alignItems: 'center',
-  //   backgroundColor: '#DAA621',
-  //   height: 50,
-  //   position: 'static',
-  // },
-  // headerText: {
-  //   color: '#662483',
-  //   fontSize: 24,
-  //   fontFamily: 'Poppins-ExtraBold',
-  //   paddingLeft: 10,
-  // },
   container: {
     backgroundColor: '#E6E6FA',
     flex: 1,

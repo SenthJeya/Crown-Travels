@@ -198,35 +198,6 @@ const styles = StyleSheet.create({
         backgroundColor: '#E6E6FA',
         flex: 1,
     },
-    // header: {
-    //     flexDirection: 'row',
-    //     alignItems: 'center',
-    //     paddingTop: 30,
-    //     backgroundColor: '#DAA621',
-    //     height: 80,
-    // },
-    // button: {
-    //     backgroundColor: '#662483',
-    //     width: 80,
-    //     height: 47,
-    //     borderTopLeftRadius: 80,
-    //     borderTopRightRadius: 10,
-    //     borderBottomRightRadius: 10,
-    //     alignItems: 'center',
-    // },
-    // buttonText: {
-    //     color: '#FFFFFF',
-    //     fontSize: 18,
-    //     fontFamily: 'Poppins-SemiBold',
-    //     paddingLeft: 10,
-    //     paddingTop: 10,
-    // },
-    // name: {
-    //     fontSize: 24,
-    //     fontFamily: 'Poppins-Bold',
-    //     paddingLeft: 40,
-    //     paddingTop: 8,
-    // },
     content: {
         padding: 20,
     },
@@ -235,7 +206,6 @@ const styles = StyleSheet.create({
         height: 170,
         marginLeft: 'auto',
         marginRight: 'auto',
-        //paddingBottom:20,
     },
     noticeCard:{
         backgroundColor: '#FFFFFF', // #e5b161
@@ -258,7 +228,6 @@ const styles = StyleSheet.create({
     noticeMessage:{
         fontFamily: 'Poppins-SemiBold',
         color: '#000000',
-        //textAlign: 'center',
         fontSize: 15,
         paddingBottom: 8,
     },
@@ -288,7 +257,6 @@ const styles = StyleSheet.create({
     checkboxLabel: {
         fontSize: 16,
         fontFamily: 'Poppins-ExtraBold',
-        //color: '#FFFFFF',
         color: '#000000',
     },
     detailCard: {

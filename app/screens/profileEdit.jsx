@@ -2,9 +2,7 @@ import { View, Text, StyleSheet, TouchableOpacity, Alert,Image } from 'react-nat
 import React, { useState, useEffect } from 'react';
 import { auth, db } from '../firebase';
 import { doc, getDoc, updateDoc } from 'firebase/firestore';
-//import { useRouter } from 'expo-router';
 import FormField from '../../components/FormField';
-//import { SafeAreaView } from 'react-native-safe-area-context'
 import ScreenHeader from '../../components/screenHeader';
 
 const EditProfile = () => {
@@ -13,7 +11,6 @@ const EditProfile = () => {
     contactNumber: ''
   });
   const [loading, setLoading] = useState(true);
-  // const router = useRouter();
 
   useEffect(() => {
     const fetchUserData = async () => {
@@ -47,24 +44,10 @@ const EditProfile = () => {
       router.replace('/tabs/profile');
     }
   };
-
-  // const back = async () => {
-  //   router.push('/tabs/profile');
-  // };
   
   return (
-    //<SafeAreaView style={styles.container}>
     <View style={styles.container}>
-      
-      {/* <View style={styles.header}>
-        <TouchableOpacity onPress={back}style={styles.backButton}>
-          <Text style={styles.backButtonText}>Back</Text>
-        </TouchableOpacity>
-        <Text style={styles.headerText}>Edit Profile</Text>
-      </View> */}
-
-      <ScreenHeader title="Edit Profile" path="/tabs/profile"/>
-      
+      <ScreenHeader title="Edit Profile" path="/tabs/profile"/>     
       <View style={styles.innerContainer}>
         <FormField
           title="Username"
@@ -86,7 +69,6 @@ const EditProfile = () => {
         </TouchableOpacity>
       </View>
     </View>
-    //</SafeAreaView>
   );
 };
 
@@ -125,37 +107,6 @@ const styles = StyleSheet.create({
     fontSize: 18,
     fontFamily: 'Poppins-SemiBold',
   },
-
-  // backButton: {
-  //   backgroundColor: '#662483',
-  //   width: 80,
-  //   height: 47,
-  //   borderTopLeftRadius: 80,
-  //   borderTopRightRadius: 10,
-  //   borderBottomRightRadius: 10,
-  //   alignItems: 'center',
-  // },
-  // backButtonText: {
-  //   color: '#FFFFFF',
-  //   fontSize: 18,
-  //   fontFamily: 'Poppins-SemiBold',
-  //   paddingLeft: 10,
-  //   paddingTop: 8,
-  // },
-
-  // header: {
-  //   flexDirection: 'row',
-  //   alignItems: 'center',
-  //   backgroundColor: '#DAA621',
-  //   height: 50,
-  // },
-  // headerText:{
-  //   color: '#000000',
-  //   fontSize: 24,
-  //   fontFamily: 'Poppins-Bold',
-  //   paddingLeft:50,
-  //   textAlign: 'center',
-  // },
 });
 
 export default EditProfile;

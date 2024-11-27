@@ -46,10 +46,6 @@ const Payment = () => {
     );
   };
 
-  // const back = () => {
-  //   router.push('/tabs/vehicle');
-  // };
-
   const handlePayment = async () => {
     setLoading(true);
 
@@ -128,14 +124,7 @@ const Payment = () => {
   };
 
   return (
-    //<SafeAreaView style={styles.maincontainer}>
     <View style={styles.maincontainer}>
-      {/* <View style={styles.header}>
-        <TouchableOpacity onPress={back} style={styles.button}>
-          <Text style={styles.buttonText}>Back</Text>
-        </TouchableOpacity>
-        <Text style={styles.name}>Payment Details</Text>
-      </View> */}
       <ScreenHeader title="Payment Details" path="/tabs/vehicle"/>
       <View style={styles.container}>
       <Image source={images.logo} style={styles.logo} resizeMode="contain" />
@@ -206,7 +195,6 @@ const Payment = () => {
         </Modal>
       </View>
     </View>
-    //</SafeAreaView>
   );
 };
 
@@ -215,35 +203,6 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: '#E6E6FA',
   },
-  // header: {
-  //   flexDirection: 'row',
-  //   alignItems: 'center',
-  //   paddingTop: 30,
-  //   backgroundColor: '#DAA621',
-  //   height: 80,
-  // },
-  // button: {
-  //   backgroundColor: '#662483',
-  //   width: 80,
-  //   height: 47,
-  //   borderTopLeftRadius: 80,
-  //   borderTopRightRadius: 10,
-  //   borderBottomRightRadius: 10,
-  //   alignItems: 'center',
-  // },
-  // buttonText: {
-  //   color: '#FFFFFF',
-  //   fontSize: 18,
-  //   fontFamily: 'Poppins-SemiBold',
-  //   paddingLeft: 10,
-  //   paddingTop: 10,
-  // },
-  // name: {
-  //   fontSize: 24,
-  //   fontFamily: 'Poppins-Bold',
-  //   paddingLeft: 40,
-  //   paddingTop: 8,
-  // },
   container: {
     padding: 15,
   },

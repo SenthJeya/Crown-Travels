@@ -3,7 +3,6 @@ import React, { useEffect, useState, useRef } from 'react';
 import { auth, db } from '../firebase'; 
 import { useRouter } from 'expo-router'; 
 import { doc, getDoc, collection, getDocs } from 'firebase/firestore';
-//import { SafeAreaView } from 'react-native-safe-area-context';
 import TabHeader from '../../components/tabHeader';
 
 const { width } = Dimensions.get('window'); 
@@ -190,11 +189,7 @@ const Home = () => {
   }, [beachAdImages]);
 
   return (
-    //<SafeAreaView style={styles.container}>
     <View style={styles.container}>
-      {/* <View style={styles.header}>
-        <Text style={styles.headerText}>Crown Travels</Text>
-      </View> */}
       <TabHeader title="Crown Travels"/>
       <View style={styles.userDetails}>
         {loading ? (
@@ -255,18 +250,6 @@ const Home = () => {
 };
 
 const styles = StyleSheet.create({
-  // header: {
-  //   flexDirection: 'row',
-  //   alignItems: 'center',
-  //   backgroundColor: '#DAA621',
-  //   height: 50,
-  // },
-  // headerText: {
-  //   color: '#662483',
-  //   fontSize: 24,
-  //   fontFamily: 'Poppins-ExtraBold',
-  //   paddingLeft: 10,
-  // },
   userDetails: {
     marginTop: 10,
     marginRight: 3,

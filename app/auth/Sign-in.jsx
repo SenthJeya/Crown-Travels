@@ -1,6 +1,5 @@
-import { View, Text, ScrollView, Image, Alert,StyleSheet } from 'react-native';
+import { View, Text, ScrollView, Image, Alert,StyleSheet,StatusBar,Platform } from 'react-native';
 import React, { useState } from 'react';
-import { SafeAreaView } from 'react-native-safe-area-context';
 import { images } from '../../constants';
 import FormField from '../../components/FormField';
 import CustomButton from '../../components/customButton';
@@ -43,7 +42,7 @@ const SignIn = () => {
   };
 
   return (
-    <SafeAreaView className="bg-primarybg h-full">
+    <View className="bg-primarybg h-full" style={styles.background}>
       <ScrollView>
         <View className="w-full justify-center min-h-[85vh] px-4 my-6">
           <Image source={images.logo} className="w-[150px] h-[250px]" resizeMode="contain" style = {styles.logo} />
@@ -77,7 +76,7 @@ const SignIn = () => {
           </View>
         </View>
       </ScrollView>
-    </SafeAreaView>
+    </View>
   );
 };
 
@@ -88,6 +87,9 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     marginLeft: 80,
     justifyContent: 'center',
+  },
+  background: {
+    paddingTop: Platform.OS === 'android' ? StatusBar.currentHeight : 0,
   },
 });
 export default SignIn;

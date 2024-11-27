@@ -1,9 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import { View, Text, Image, StyleSheet, TouchableOpacity } from 'react-native';
+import { View, Text, Image, StyleSheet } from 'react-native';
 import { useLocalSearchParams } from 'expo-router';
 import { doc, getDoc } from 'firebase/firestore';
 import { db } from '../firebase';
-import { useRouter} from 'expo-router';
 import ScreenHeader from '../../components/screenHeader';
 
 const PlaceDetails = () => {
@@ -31,25 +30,12 @@ const PlaceDetails = () => {
     fetchPlace();
   }, [placeId]);
 
-  //const router = useRouter();
-
-  // const back = async () => {
-  //   router.push('/tabs/location');
-  // };
-
   if (!place) {
     return <Text>Loading...</Text>;
   }
 
   return (
-    //<SafeAreaView style={styles.container}>
     <View style={styles.container}>
-      {/* <View style={styles.header}>
-        <TouchableOpacity onPress={back} style={styles.button}>
-          <Text style={styles.buttonText}>Back</Text>
-        </TouchableOpacity>
-        <Text style={styles.name}>{place.name}</Text>
-      </View> */}
       <ScreenHeader title={place.name} path="/tabs/location"/>
       <View style={styles.contentContainer}>
         
@@ -73,19 +59,10 @@ const PlaceDetails = () => {
         
       </View>
     </View>
-    //</SafeAreaView>
   );
 };
 
 const styles = StyleSheet.create({
-  // header: {
-  //   flexDirection: 'row',
-  //   alignItems: 'center',
-  //   paddingTop: 30,
-  //   backgroundColor: '#DAA621',
-  //   height: 80,
-  // },
-
   container: {
     backgroundColor: '#E6E6FA',
     flex: 1,
@@ -94,25 +71,6 @@ const styles = StyleSheet.create({
   contentContainer:{
     padding: 10,
   },
-
-  // button: {
-  //   backgroundColor: '#662483',
-  //   width: 80,
-  //   height: 47,
-  //   borderTopLeftRadius: 80,
-  //   borderTopRightRadius: 10,
-  //   borderBottomRightRadius: 10,
-  //   alignItems: 'center',
-  // },
-
-  // buttonText: {
-  //   color: '#FFFFFF',
-  //   fontSize: 18,
-  //   fontFamily: 'Poppins-SemiBold',
-  //   paddingLeft: 10,
-  //   paddingTop: 10,
-  // },
-
   image: {
     width: '100%',
     height: 300,
@@ -122,13 +80,6 @@ const styles = StyleSheet.create({
     borderColor: '#662483',
     borderRadius:10,
   },
-
-  // name: {
-  //   fontSize: 24,
-  //   fontFamily: 'Poppins-Bold',
-  //   paddingLeft: 70,
-  //   paddingTop:8,
-  // },
 
   details: {
     fontSize: 17,

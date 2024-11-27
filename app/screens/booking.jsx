@@ -34,10 +34,6 @@ const Booking = () => {
         setSelectedDate(dateTime);
     };
 
-    // const back = () => {
-    //     router.push('/tabs/vehicle');
-    // };
-
     const handleConfirmation = () => {
         if (!pickupValue || !destinationValue || !durationValue) {
             Alert.alert("Missing Information", "Please select pickup, destination, and duration before proceeding.");
@@ -129,14 +125,7 @@ const Booking = () => {
     ];
 
     return (
-        //<SafeAreaView style={styles.container}>
         <View style={styles.container}>
-            {/* <View style={styles.header}>
-                <TouchableOpacity onPress={back} style={styles.button}>
-                    <Text style={styles.buttonText}>Back</Text>
-                </TouchableOpacity>
-                <Text style={styles.name}>Booking</Text>
-            </View> */}
             <ScreenHeader title="Booking" path="/tabs/vehicle"/>
             <View style={styles.innercontainer}>
                 <DropdownField
@@ -182,7 +171,6 @@ const Booking = () => {
                 </TouchableOpacity>
             </View>
         </View>
-        //</SafeAreaView>
     );
 };
 
@@ -195,35 +183,6 @@ const styles = StyleSheet.create({
     innercontainer: {
         margin: 10,
     },
-    // header: {
-    //     flexDirection: 'row',
-    //     alignItems: 'center',
-    //     paddingTop: 30,
-    //     backgroundColor: '#DAA621',
-    //     height: 80,
-    // },
-    // button: {
-    //     backgroundColor: '#662483',
-    //     width: 80,
-    //     height: 47,
-    //     borderTopLeftRadius: 80,
-    //     borderTopRightRadius: 10,
-    //     borderBottomRightRadius: 10,
-    //     alignItems: 'center',
-    // },
-    // buttonText: {
-    //     color: '#FFFFFF',
-    //     fontSize: 18,
-    //     fontFamily: 'Poppins-SemiBold',
-    //     paddingLeft: 10,
-    //     paddingTop: 10,
-    // },
-    // name: {
-    //     fontSize: 24,
-    //     fontFamily: 'Poppins-Bold',
-    //     paddingLeft: 70,
-    //     paddingTop: 8,
-    // },
     proceedButton: {
         backgroundColor: '#662483',
         paddingVertical: 12,

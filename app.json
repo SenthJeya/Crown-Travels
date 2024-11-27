@@ -19,7 +19,8 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/icon-new.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.senth.CrownTravels"
     },
     "web": {
       "bundler": "metro",

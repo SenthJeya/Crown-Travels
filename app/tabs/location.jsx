@@ -3,7 +3,6 @@ import { View, Text, Image, TouchableOpacity, StyleSheet, FlatList } from 'react
 import { useRouter } from 'expo-router';
 import { collection, getDocs } from 'firebase/firestore';
 import { db } from '../firebase';
-//import { SafeAreaView } from 'react-native-safe-area-context';
 import TabHeader from '../../components/tabHeader';
 
 const LocationScreen = () => {
@@ -30,11 +29,7 @@ const LocationScreen = () => {
   );
 
   return (
-    //<SafeAreaView style={styles.container}>
     <View style={styles.container}>
-      {/* <View style={styles.header}>
-        <Text style={styles.headerText}>Places</Text>
-      </View> */}
       <TabHeader title="Places"/>
       <FlatList
         data={places}
@@ -43,7 +38,6 @@ const LocationScreen = () => {
         contentContainerStyle={styles.container}
       />
     </View>
-    //</SafeAreaView>
   );
 };
 
@@ -62,18 +56,6 @@ const styles = StyleSheet.create({
     borderWidth: 2,
     borderColor: '#6A1B9A',
   },
-  // header:{
-  //   flexDirection: 'row',
-  //   alignItems: 'center',
-  //   backgroundColor: '#DAA621',
-  //   height: 50,
-  // },
-  // headerText:{
-  //   color: '#662483',
-  //   fontSize: 24,
-  //   fontFamily: 'Poppins-ExtraBold',
-  //   paddingLeft:10,
-  // },
   image: {
     width: '100%',
     height: 200,
