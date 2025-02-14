@@ -59,8 +59,3 @@ Acknowledgments
   Sri Lankan Tourism Board for inspiration.
   Expo for an amazing React Native framework.
   Firebase for real-time database and storage solutions.
-
-
-
-Let me know if you’d like to make further edits!
-
