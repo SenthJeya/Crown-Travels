@@ -48,9 +48,9 @@ Usage
   Use the booking feature to plan trips.
   Manage bookings and view bills.
   Future Enhancements
-  Add support for iOS devices. -- have to check
-  Implement multi-language support. --have to check
-  Include a review and rating system for places and hotels. --have to check
+  Add support for iOS devices. 
+  Implement multi-language support. 
+  Include a review and rating system for places and hotels. 
 
 License
   This project is licensed under the MIT License.
