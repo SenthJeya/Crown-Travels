@@ -7,7 +7,6 @@ Crown Travels is a travel application designed for exploring tourist attractions
 - Display tourist places, hotels, and unique attractions in all 25 districts of Sri Lanka.
 - Cards for district information with images sourced from Firebase.
 - Booking feature for buses and vans for trips.
-- Session-based cart management.  -- have to check
 - Bill generation for confirmed bookings with cancellation options.
 - Firebase integration for real-time data handling.
 - Modern and intuitive UI.
